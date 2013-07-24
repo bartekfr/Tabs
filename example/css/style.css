@@ -1,0 +1,62 @@
+/**
+author: Bartlomiej Fryzowicz
+e-mail: bfryzowicz@gmail.com
+**/
+
+*{margin:0; padding:0; outline:none}
+
+a {
+	text-decoration:none; 
+	cursor:pointer
+}
+
+img {border:0;}
+header, footer, nav, aside, article {display: block;}
+
+html { 
+	min-width: 300px;
+}
+
+body { 
+	width: 960px;
+	border-top: 10px solid #606060;
+	font-family: Arial, sans-serif; 
+	margin: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+p {
+	padding: 10px 0;
+}
+
+/*tabs----------------------------------------------------------*/
+.tab {
+	margin-top: 15px;
+	overflow: hidden;
+	min-height: 500px;
+}
+
+.tab-nav {
+	padding-bottom: 15px;
+}
+
+.tab-nav li {
+	display: inline-block;
+	margin: 3px;
+}
+
+.tab-nav li a{
+	display: block;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background: #000;
+	color: #fff;
+}
+
+
+.tab-nav .active a{
+	color: #7DB7F9;
+}

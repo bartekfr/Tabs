@@ -8,7 +8,6 @@ function tabsSolution(options) {
 		activeClass: 'active',
 		activeIndex: 0,
 		animationType: 'slide',
-		jsNav: false,
 		showTime: 700,
 		hideTime: 700,
 		type: 'slide'
@@ -24,7 +23,6 @@ function tabsSolution(options) {
 	var hideTime = settings.hideTime;
 	var effect = settings.type;
 	var itemsNumber = tabs.length;
-	var jsNav = settings.jsNav;
 	var previousTab;
 	var transEndEventName;
 	var transCssName;
@@ -162,16 +160,7 @@ function tabsSolution(options) {
 	}		
 	
 	function getNav(){
-		if(jsNav === false) {
-			navItems = $('li', navSelector);
-		} else if(jsNav === true){
-			var navOptions = {
-					arrows: false,
-					itemsNumber: itemsNumber,
-					parent: $(navSelector)
-				};
-			navItems = paginator(navOptions).items;
-		}
+		navItems = $('li', navSelector);
 	}
 }
 
