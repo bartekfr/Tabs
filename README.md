@@ -2,8 +2,7 @@ Tab jQuery Plugin
 ====
 
 Tab component allow to toggle tabs using CSS Transition rather than JS animations if possible.
-You can toggle tabs with slide or fade effect. You can also load tab content with AJAX - in this case ther
-e is no toggle animation and loaded content is just simply inserted into the tab content section. Before AJAX content is loaded the "div.ajax-loading" element is visible so you can create you own CSS for this. URL of content to be loaded is defined in navigation items "href" attribute.
+You can toggle tabs with slide or fade effect. You can also load tab content with AJAX - in this case there is no toggle animation and loaded content is just simply inserted into the tab content section. Before AJAX content is loaded the "div.ajax-loading" element is visible so you can create you own CSS for this. URL of content to be loaded is defined in navigation items "href" attribute.
 
 
 ###Configuration:
