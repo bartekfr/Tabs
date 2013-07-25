@@ -5,7 +5,9 @@
 	function tabsSolution(options, that) {
 		var DEFAULT = {
 			tabContentItemSelector: '.tab-content > li',
+			contentSelector: ".tab-content",
 			tabNavItemSelector: '.tab-nav >li',
+			navSelector: ".tab-nav",
 			activeClass: 'active',
 			activeIndex: 0,
 			showTime: 700,
@@ -143,13 +145,14 @@
 		
 		function ajaxLoad() {
 			var activeNav = navItems.eq(activeIndex);
-			var contentHolder = $(settings.tabsSelector);
+			var contentHolder = $(settings.contentSelector, that);
 			var href = $('a', activeNav).attr('href');
 			var iconDiv = $('<div class="ajax-loading">').css({
 				width: 20,
 				height: 60,
 				margin: 'auto'
 			});	
+			console.log(contentHolder);
 			contentHolder.html(iconDiv).load(href);	
 		}
 		
