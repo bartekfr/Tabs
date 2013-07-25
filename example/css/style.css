@@ -35,7 +35,6 @@ p {
 /*tabs----------------------------------------------------------*/
 .tab {
 	margin-top: 15px;
-	overflow: hidden;
 	min-height: 500px;
 }
 
@@ -59,8 +58,4 @@ p {
 
 .tab-nav .active a{
 	color: #7DB7F9;
-}
-
-.tab-content li {
-	overflow: hidden;
 }
