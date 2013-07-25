@@ -12,7 +12,8 @@
 			activeIndex: 0,
 			showTime: 700,
 			hideTime: 700,
-			type: 'slide'
+			type: 'slide',
+			ajaxContainer: '.content'
 		};
 		var settings = $.extend(true, {}, DEFAULT, options);
 		//var navItemSelector = settings.navItemSelector;
@@ -146,7 +147,7 @@
 		function ajaxLoad() {
 			var activeNav = navItems.eq(activeIndex);
 			var contentHolder = $(settings.contentSelector, that);
-			var href = $('a', activeNav).attr('href');
+			var href = $('a', activeNav).attr('href') + " " + settings.ajaxContainer;
 			var iconDiv = $('<div class="ajax-loading">').css({
 				width: 20,
 				height: 60,
