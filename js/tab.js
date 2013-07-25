@@ -4,8 +4,8 @@
 (function($) {
 	function tabsSolution(options, that) {
 		var DEFAULT = {
-			tabItemSelector: '.tab-content > li',
-			navItemSelector: '.tab-nav >li',
+			tabContentItemSelector: '.tab-content > li',
+			tabNavItemSelector: '.tab-nav >li',
 			activeClass: 'active',
 			activeIndex: 0,
 			showTime: 700,
@@ -13,9 +13,9 @@
 			type: 'slide'
 		};
 		var settings = $.extend(true, {}, DEFAULT, options);
-		var navItemSelector = settings.navItemSelector;
-		var navItems = $(navItemSelector, that);
-		var tabs = $(settings.tabItemSelector, that);
+		//var navItemSelector = settings.navItemSelector;
+		var navItems = $(settings.tabNavItemSelector, that);
+		var tabs = $(settings.tabContentItemSelector, that);
 		var activeIndex = settings.activeIndex;
 		var activeClass = settings.activeClass;
 		var activeTab;
