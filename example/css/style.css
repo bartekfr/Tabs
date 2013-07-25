@@ -60,3 +60,7 @@ p {
 .tab-nav .active a{
 	color: #7DB7F9;
 }
+
+.tab-content li {
+	overflow: hidden;
+}

@@ -1,5 +1,4 @@
-tabsSolution({
-			tabsSelector: '.tab-content',
-			navSelector: '.tab-nav',
-			type: 'fade'
-		});	
+
+$('.tab.fade').tabs({type: 'fade'});
+
+$('.tab.slide').tabs({type: 'slide'});
