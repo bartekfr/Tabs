@@ -33,8 +33,6 @@
 		var animatedProperty = animatedProperties[effect];
 		var transitioned = false;
 
-		console.log(tabs);
-
 		var init = {
 			'slide': $.noop,
 			'fade': function(){
