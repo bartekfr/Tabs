@@ -59,3 +59,8 @@ p {
 .tab-nav .active a{
 	color: #7DB7F9;
 }
+
+.ajax-loading {
+	height: 100px;
+	background: #eee;
+}

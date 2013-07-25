@@ -12,8 +12,7 @@
 			activeIndex: 0,
 			showTime: 700,
 			hideTime: 700,
-			type: 'slide',
-			ajaxContainer: '.content'
+			type: 'slide'
 		};
 		var settings = $.extend(true, {}, DEFAULT, options);
 		//var navItemSelector = settings.navItemSelector;
@@ -147,13 +146,11 @@
 		function ajaxLoad() {
 			var activeNav = navItems.eq(activeIndex);
 			var contentHolder = $(settings.contentSelector, that);
-			var href = $('a', activeNav).attr('href') + " " + settings.ajaxContainer;
-			var iconDiv = $('<div class="ajax-loading">').css({
-				width: 20,
-				height: 60,
-				margin: 'auto'
-			});	
-			console.log(contentHolder);
+			var href = $('a', activeNav).attr('href');
+			if (typeof settings.ajaxContainer !== "undefined") {
+				href += " " + settings.ajaxContainer;
+			}
+			var iconDiv = $('<div class="ajax-loading">');	
 			contentHolder.html(iconDiv).load(href);	
 		}
 		
