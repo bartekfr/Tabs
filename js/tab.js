@@ -15,7 +15,6 @@
 			type: 'slide'
 		};
 		var settings = $.extend(true, {}, DEFAULT, options);
-		//var navItemSelector = settings.navItemSelector;
 		var navItems = $(settings.tabNavItemSelector, that);
 		var tabs = $(settings.tabContentItemSelector, that).addClass("tab-content-item");
 		var activeIndex = settings.activeIndex;
