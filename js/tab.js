@@ -2,19 +2,9 @@
 * author: Bartlomiej Fryzowicz
 */
 (function($) {
-	function tabsSolution(options, that) {
-		var DEFAULT = {
-			tabContentItemSelector: '.tab-content > li',
-			contentSelector: ".tab-content",
-			tabNavItemSelector: '.tab-nav >li',
-			navSelector: ".tab-nav",
-			activeClass: 'active',
-			activeIndex: 0,
-			showTime: 700,
-			hideTime: 700,
-			type: 'slide'
-		};
-		var settings = $.extend(true, {}, DEFAULT, options);
+	function tabsSolution() {
+		var settings = this.options;
+		var that = this.element;
 		var navItems = $(settings.tabNavItemSelector, that);
 		var tabs = $(settings.tabContentItemSelector, that).addClass("tab-content-item");
 		var activeIndex = settings.activeIndex;
@@ -158,12 +148,20 @@
 		}		
 	}
 
-	$.fn.tabs = function(opt) {
-		return this.each(function() {
-			var that = $(this);
-			tabsSolution(opt, that);
-		});
-	};
+	$.widget('my.tabs', {
+		options: {
+			tabContentItemSelector: '.tab-content > li',
+			contentSelector: ".tab-content",
+			tabNavItemSelector: '.tab-nav >li',
+			navSelector: ".tab-nav",
+			activeClass: 'active',
+			activeIndex: 0,
+			showTime: 700,
+			hideTime: 700,
+			type: 'slide'
+		},
+		_create: tabsSolution
+	})
 })(jQuery);
 
 

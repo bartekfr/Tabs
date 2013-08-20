@@ -1,4 +1,4 @@
-Tab jQuery Plugin
+Tab jQuery Widget
 ====
 
 Tab component allow to toggle tabs using CSS Transition rather than JS animations if possible.
@@ -17,4 +17,4 @@ You can toggle tabs with slide or fade effect. You can also load tab content wit
 * type: animation effect [slide, fade, ajax]
 * ajaxContainer: CSS selector defining the part of loaded resource that will be inserted into the tab content section (if "type" option is set to "ajax")
 
-**Required libs**: jQuery, Modernizr with CSS Transition and prefixed modules
+**Required libs**: jQuery, jQuery UI 1.8 with Widget module, Modernizr with CSS Transition and prefixed modules
