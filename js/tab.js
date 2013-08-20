@@ -5,7 +5,8 @@
 	function tabsSolution() {
 		var settings = this.options;
 		var that = this.element;
-		var navItems = $(settings.tabNavItemSelector, that);
+		
+		var navItems = this.getNavigation();
 		var tabs = $(settings.tabContentItemSelector, that).addClass("tab-content-item");
 		var activeIndex = settings.activeIndex;
 		var activeClass = settings.activeClass;
@@ -159,6 +160,12 @@
 			showTime: 700,
 			hideTime: 700,
 			type: 'slide'
+		},
+		getNavigation: function() {
+			return this.navItems = $(this.options.tabNavItemSelector, this.element);	
+		},
+		setActive: function(i) {
+			this.navItems.eq(i).click();
 		},
 		_create: tabsSolution
 	});

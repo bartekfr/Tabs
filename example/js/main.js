@@ -1,6 +1,6 @@
 
-$('.tab.fade').tabs({type: 'fade'});
+var fadeT = $('.tab.fade').tabs({type: 'fade'});
 
-$('.tab.slide').tabs({type: 'slide'});
+var slideT = $('.tab.slide').tabs({type: 'slide'});
 
-$('.tab.ajax').tabs({type: 'ajax', ajaxContainer: '.content'});
+var ajaxT = $('.tab.ajax').tabs({type: 'ajax', ajaxContainer: '.content'});
