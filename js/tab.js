@@ -161,7 +161,7 @@
 			type: 'slide'
 		},
 		_create: tabsSolution
-	})
+	});
 })(jQuery);
 
 
