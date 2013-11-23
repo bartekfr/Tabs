@@ -2,6 +2,8 @@
 * author: Bartlomiej Fryzowicz
 */
 (function($) {
+	var showTime;
+	var hideTime;
 	function tabsSolution() {
 		var settings = this.options;
 		var that = this.element;
@@ -11,8 +13,6 @@
 		var activeIndex = settings.activeIndex;
 		var activeClass = settings.activeClass;
 		var activeTab;
-		var showTime = settings.showTime;
-		var hideTime = settings.hideTime;
 		var effect = settings.type;
 		var itemsNumber = tabs.length;
 		var previousTab;
@@ -24,6 +24,8 @@
 		};
 		var animatedProperty = animatedProperties[effect];
 		var transitioned = false;
+		showTime = settings.showTime;
+		hideTime = settings.hideTime;
 
 		var init = {
 			'slide': $.noop,
@@ -166,6 +168,15 @@
 		},
 		setActive: function(i) {
 			this.navItems.eq(i).click();
+		},
+		_setOption: function(key, value) {
+			this._super(key, value);
+			if(key === "showTime") {
+				showTime = value;
+			}
+			if(key === "hideTime") {
+				hideTime = value;
+			}
 		},
 		_create: tabsSolution
 	});
